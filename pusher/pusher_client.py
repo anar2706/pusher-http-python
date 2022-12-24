@@ -91,7 +91,7 @@ class PusherClient(Client):
             raise ValueError("event_name too long")
 
         data = data_to_string(data, self._json_encoder)
-        print(f'pusher size {sys.getsizeof(data)}')
+
         if sys.getsizeof(data) > 1020000:
             raise ValueError("Too much data")
 
