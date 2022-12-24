@@ -92,7 +92,7 @@ class PusherClient(Client):
 
         data = data_to_string(data, self._json_encoder)
         print(f'pusher size {sys.getsizeof(data)}')
-        if sys.getsizeof(data) > 5120000:
+        if sys.getsizeof(data) > 1020000:
             raise ValueError("Too much data")
 
         channels = list(map(validate_channel, channels))
